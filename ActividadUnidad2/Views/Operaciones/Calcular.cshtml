@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Calculadora";
+}
+
+<div style="display:flex; flex-direction:column; align-items:center; min-height:70vh;">
+    <h2>Calculadora</h2>
+
+    <form method="post" style="margin-top:20px; text-align:center;">
+        <input type="number" step="any" name="valor1" placeholder="Primer número" required style="width:200px; padding:8px;" />
+        <br /><br />
+        <input type="number" step="any" name="valor2" placeholder="Segundo número" required style="width:200px; padding:8px;" />
+        <br /><br />
+        <select name="operacion" style="width:200px; padding:8px;" required>
+            <option value="Sumar">Sumar</option>
+            <option value="Restar">Restar</option>
+            <option value="Multiplicar">Multiplicar</option>
+            <option value="Dividir">Dividir</option>
+            <option value="Potencia">Potencia</option>
+        </select>
+        <br /><br />
+        <button type="submit" style="
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        ">
+            Calcular
+        </button>
+    </form>
+
+    @if (ViewBag.Resultado != null)
+    {
+        <p style="margin-top:20px; font-size:18px; color:#333;">Resultado: <b>@ViewBag.Resultado</b></p>
+    }
+
+    <br />
+    <a href="/Home/Index" style="
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    ">⬅️ Volver al Menú</a>
+</div>

@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Tabla de Multiplicar";
+}
+
+<div style="display:flex; flex-direction:column; align-items:center; min-height:70vh;">
+    <h2>Tabla de Multiplicar</h2>
+
+    <form method="post" style="margin-top:20px;">
+        <input type="number" name="numero" placeholder="Ingresa un número" style="width:250px; padding:8px;" />
+        <br /><br />
+        <button type="submit">Generar</button>
+    </form>
+
+    @if (ViewBag.Tabla != null)
+    {
+        <ul style="margin-top:15px; font-weight:bold;">
+            @foreach (var linea in ViewBag.Tabla)
+            {
+                <li>@linea</li>
+            }
+        </ul>
+    }
+
+    <br />
+    <a href="/Home/Index" style="
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    ">⬅️ Volver al Menú</a>
+</div>

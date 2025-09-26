@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Serie de Fibonacci";
+}
+
+<div style="display:flex; flex-direction:column; align-items:center; min-height:70vh;">
+    <h2>Comprobar si un número pertenece a Fibonacci</h2>
+
+    <form method="post" style="margin-top:20px; text-align:center;">
+        <input type="number" name="numero" placeholder="Ingresa un número" required style="width:200px; padding:8px;" />
+        <br /><br />
+        <button type="submit" style="
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        ">
+            Verificar
+        </button>
+    </form>
+
+    @if (ViewBag.Resultado != null)
+    {
+        <p style="margin-top:20px; font-size:18px; color:#333;">@ViewBag.Resultado</p>
+    }
+
+    <br />
+    <a href="/Home/Index" style="
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    ">⬅️ Volver al Menú</a>
+</div>

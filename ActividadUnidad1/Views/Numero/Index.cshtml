@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Signo de un Número";
+}
+
+<div style="display:flex; flex-direction:column; align-items:center; min-height:70vh;">
+    <h2>Verificar Signo de un Número</h2>
+    <form method="post" style="margin-top:20px;">
+        <input type="number" name="numero" placeholder="Ingresa un número" style="width:250px; padding:8px;" />
+        <br /><br />
+        <button type="submit">Verificar</button>
+    </form>
+
+    @if (ViewBag.Resultado != null)
+        @ViewBag.Resultado
+
+
+    <br />
+    <a href="/Home/Index" style="
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    ">⬅️ Volver al Menú</a>
+</div>

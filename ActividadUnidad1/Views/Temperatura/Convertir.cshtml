@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Conversión de Temperatura";
+}
+
+<div style="display:flex; flex-direction:column; align-items:center; min-height:70vh;">
+    <h2>Convertir Fahrenheit a Celsius</h2>
+    <form method="post" style="margin-top:20px;">
+        <input type="number" step="any" name="fahrenheit" placeholder="Ingresa °F" style="width:280px; padding:8px;" />
+        <br /><br />
+        <button type="submit">Convertir</button>
+    </form>
+
+    @if (ViewBag.Fahrenheit != null)
+    {
+        <p style="margin-top:15px; font-weight:bold;">
+            @string.Format("{0} °F equivalen a {1:0.00} °C", ViewBag.Fahrenheit, ViewBag.Celsius)
+        </p>
+    }
+
+    <br />
+    <a href="/Home/Index" style="
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    ">⬅️ Volver al Menú</a>
+</div>

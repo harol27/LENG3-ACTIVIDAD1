@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Clave Fuerte";
+}
+
+<div style="display:flex; flex-direction:column; align-items:center; min-height:70vh;">
+    <h2>Verificar Contraseña Segura</h2>
+    <form method="post" style="margin-top:20px;">
+        <input type="password" name="clave" placeholder="Ingresa una contraseña" style="width:250px; padding:8px;" />
+        <br /><br />
+        <button type="submit">Verificar</button>
+    </form>
+
+    @if (ViewBag.Resultado != null)
+        @ViewBag.Resultado
+
+    <br />
+    <a href="/Home/Index" style="
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    ">⬅️ Volver al Menú</a>
+</div>
+}

@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div style="display:flex; flex-direction:column; align-items:center; min-height:70vh;">
+    <h2>INF-4313 - Lenguaje de Programación III</h2>
+    <h3>Inicio de Sesión</h3>
+
+    <form method="post" style="margin-top:20px; text-align:center;">
+        <input type="text" name="usuario" placeholder="Usuario" required style="width:220px; padding:8px;" />
+        <br /><br />
+        <input type="password" name="contrasena" placeholder="Contraseña" required style="width:220px; padding:8px;" />
+        <br /><br />
+        <button type="submit" style="
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        ">
+            Ingresar
+        </button>
+    </form>
+
+    @if (ViewBag.Error != null)
+    {
+        <p style="margin-top:20px; color:red; font-weight:bold;">@ViewBag.Error</p>
+    }
+
+    <br />
+    <a href="/Home/Index" style="
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    ">⬅️ Volver al Menú</a>
+</div>

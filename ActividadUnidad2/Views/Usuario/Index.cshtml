@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Datos del Usuario";
+}
+
+<div style="display:flex; flex-direction:column; align-items:center; min-height:70vh;">
+    <h2>Formulario de Usuario</h2>
+
+    <form method="post" style="margin-top:20px; text-align:center;">
+        <input type="text" name="nombre" placeholder="Escribe tu nombre" required style="width:280px; padding:8px;" />
+        <br /><br />
+        <input type="date" name="fechaNacimiento" required style="width:280px; padding:8px;" />
+        <br /><br />
+        <button type="submit" style="
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        ">Enviar</button>
+    </form>
+
+    @if (ViewBag.Mensaje != null)
+    {
+        <p style="margin-top:20px; font-size:18px; color:#333;">@ViewBag.Mensaje</p>
+    }
+
+    <br />
+    <a href="/Home/Index" style="
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    ">⬅️ Volver al Menú</a>
+</div>
